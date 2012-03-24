@@ -1,10 +1,10 @@
 (function($) {
-  // PlaceKitten JQuery Plugin
-  $.fn.placekitten = function(options, callback) {
+  // PlaceDog JQuery Plugin
+  $.fn.placedog = function(options, callback) {
     // Setup
     var $elements = this;
     if (!$elements.length) { return $elements; }
-    options = $.extend({},$.fn.placekitten.defaults, options);
+    options = $.extend({},$.fn.placedog.defaults, options);
 
     // Turn each element selected into a kitten
     $elements.each(function() {
@@ -27,7 +27,7 @@
            width = $element.width();
 
       // Swap target for kitten image
-      var imageUrl = 'http://placekitten.com/' + width + '/' + height;
+      var imageUrl = 'http://placedog.com/' + width + '/' + height;
       var $kitten = $('<img src="' + imageUrl + '" />');
 
       // Load target css into kitten element
@@ -50,7 +50,7 @@
   };
 
   // default options
-  $.fn.placekitten.defaults = {
+  $.fn.placedog.defaults = {
     fadeSpeed: 500
   };
 
